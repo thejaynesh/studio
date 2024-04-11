@@ -1,0 +1,25 @@
+{
+  "flutter": {
+    "platforms": {
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "studio-jb12",
+          "configurations": {
+            "web": "1:459772227800:web:6d4a70347fe095598127ad"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-east1"
+    }
+  }
+}
