@@ -1,68 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:studio/View/AnimatedtextWidget.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int screenIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Container(
-
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(20),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                backgroundBlendMode: BlendMode.softLight,
+                color: Colors.white
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
                   children: [
+                    AnimatedTextWidget(),
                     Container(
-                      height: 200,
-                      decoration: const BoxDecoration(
-
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-
-                      ),
-
-                        child: Image.network("https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/portfolio-img.jpg?alt=media&token=e947ff21-dff9-49e4-aedc-e01180aa6f7b")),
-                    Text("Jaynesh Bhandari"),
+                        height: 200,
+                        decoration: const BoxDecoration(
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(20))),
+                        child: Stack(children: [
+                          Image.network(
+                              "https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/portfolio-img.jpg?alt=media&token=e947ff21-dff9-49e4-aedc-e01180aa6f7b")
+                        ])),
 
                   ],
                 ),
               ),
-            )
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-
-          unselectedItemColor: Colors.grey,
-          selectedItemColor: Colors.blueAccent,
-
-          showSelectedLabels: true,
-          showUnselectedLabels: true,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home),label: "home"),
-            BottomNavigationBarItem(icon: Icon(Icons.format_list_bulleted),label: "Projects"),
-            BottomNavigationBarItem(icon: Icon(Icons.quick_contacts_mail_outlined),label: "Contact Me")
-          ],
-          onTap: (int i){
-            setState(() {
-              screenIndex = i;
-            });
-          },
-          currentIndex: screenIndex,
-          type: BottomNavigationBarType.shifting,
-        ),
-      ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

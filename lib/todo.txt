@@ -1,0 +1,57 @@
+1. Sort out hosting
+    - index should be opened not readme /* doesn't matter using firebase*/
+    - write readMe
+    - figure out what file to push and what to ignore
+
+2. Add theme for light and dark mode.
+
+3. Make home and contact page.
+
+Home page -
+    - starts with name and image.
+    - scroll to find projects
+
+    Projects
+    - Glass blur rectangular frame with project name, icon
+        - on Tap open a dialog box - Icon , name , Description, Challenges I faced, What I learnt , action buttons (open app and close dialog box)
+
+    Skills -
+    - Chips with Skill name,
+        - on Tap open a dialog box - describing that skill and projects where i used it
+
+    Academic Background -
+    - mostly static text
+    - a line that has a diploma hat that moves from Medicaps to Northeastern (optional)
+
+    Experience -
+    - TCS (text only)
+
+Contact Me -
+ - share LinkedIn, Github, EMail'
+
+
+
+Project Pages -
+    = AppBar to go back to homePage ( still following selectedTheme)
+    - buy option for ERP, Inventory Management,
+    -
+
+
+
+- Setup Email with jayneshbhandari.me domain
+
+
+
+
+
+
+
+
+
+
+
+    (additional Maybe )
+    - hobbies -
+    - make a gallery of photography
+
+

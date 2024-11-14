@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'View/HomeScreen.dart';
+import 'View/EmptyTemplate.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +14,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'The Studio',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        textTheme: TextTheme(
+          displayLarge: TextStyle(
+            fontFamily: "Montserrat",
+            fontSize: 46,
+            color: Colors.white
+          )
+        )
+        //To Do - create Theme
       ),
-      home: HomeScreen(),
+      home: const Template(),
     );
   }
 }
