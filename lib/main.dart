@@ -1,30 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:studio/View/SplashScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-import 'View/EmptyTemplate.dart';
+import 'Model/JobApplication.dart';
+import 'Services/Firestore_service.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  final Uri uri = Uri.base; // Current URL
+  final String? trckParam = uri.queryParameters['trck'];
+
+  // Fetch Firestore data based on trckParam
+  final FirestoreService firestoreService = FirestoreService();
+  final fetchedData =  await firestoreService.fetchJobApplication(trckParam);
+  runApp(MyApp(fetchedData: fetchedData));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final JobApplication fetchedData;
+
+  const MyApp({required this.fetchedData});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'The Studio',
       theme: ThemeData(
-        textTheme: TextTheme(
-          displayLarge: TextStyle(
-            fontFamily: "Montserrat",
-            fontSize: 46,
-            color: Colors.white
-          )
-        )
-        //To Do - create Theme
-      ),
-      home: const Template(),
+          textTheme: TextTheme(
+        displayLarge: GoogleFonts.montserrat(
+          fontSize: 46
+        ),
+      )),
+      home: SplashScreen(data: fetchedData),
     );
   }
 }
-
