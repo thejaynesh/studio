@@ -29,7 +29,11 @@
 .packages
 .pub-cache/
 .pub/
-/build/
+/build/018860c5cb45e8d76fe9f31d8dd0c0e7
+/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill
+/build/cache.dill.track.dill
+/build/last_build_run.json
+/build/flutter_assets
 /lib/firebase_options.dart
 
 # Web related
