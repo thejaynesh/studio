@@ -7,7 +7,7 @@ import 'EmptyTemplate.dart';
 class SplashScreen extends StatefulWidget {
   final JobApplication data;
 
-  const SplashScreen({required this.data});
+  const SplashScreen({Key? key, required this.data}) : super(key: key);
 
   @override
   _SplashScreenState createState() => _SplashScreenState(data: data);
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 1), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const Template()),

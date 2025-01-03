@@ -23,7 +23,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   final JobApplication fetchedData;
 
-  const MyApp({required this.fetchedData});
+  const MyApp({Key? key, required this.fetchedData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           textTheme: TextTheme(
         displayLarge: GoogleFonts.montserrat(
-          fontSize: 46
+          fontSize: 46,
+          color: Colors.white
         ),
       )),
       home: SplashScreen(data: fetchedData),
