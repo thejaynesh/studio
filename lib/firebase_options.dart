@@ -53,13 +53,14 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAQvDUqfKmcUZr3sSdsK0kqGONiJgAZlag',
-    appId: '1:459772227800:web:6d4a70347fe095598127ad',
+    apiKey: 'AIzaSyAwhxdRIYUqoHOvsbK0a5clJSXy360jfiY',
+    appId: '1:459772227800:web:80d5566b4c4075c48127ad',
     messagingSenderId: '459772227800',
     projectId: 'studio-jb12',
     authDomain: 'studio-jb12.firebaseapp.com',
+    databaseURL: 'https://studio-jb12-default-rtdb.firebaseio.com',
     storageBucket: 'studio-jb12.appspot.com',
-    measurementId: 'G-8GM17YK09C',
+    measurementId: 'G-T724ENSKCB',
   );
 
 }

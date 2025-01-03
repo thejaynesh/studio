@@ -42,16 +42,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     "Jaynesh Bhandari",
                   ],
                 ),
-                // Dynamic Container for Image
                 Flexible(
                   child: Container(
-                    constraints: const BoxConstraints(
-                      maxWidth: 300, // Maximum width for the container
-                      maxHeight: 600
+                    constraints: BoxConstraints(
+                      maxHeight: 600,
+                      maxWidth: 300,
                     ),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(12),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.black26,
@@ -60,26 +58,19 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: AspectRatio(
-                        aspectRatio: 16 / 9, // Set desired aspect ratio
-                        child: Image.network(
-                          'https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/portfolio-img.jpg?alt=media&token=e947ff21-dff9-49e4-aedc-e01180aa6f7b',
-                          fit: BoxFit.cover,
-                          loadingBuilder: (context, child, loadingProgress) {
-                            if (loadingProgress == null) return child;
-                            return const Center(
-                              child: CircularProgressIndicator(),
-                            );
-                          },
-                          errorBuilder: (context, error, stackTrace) {
-                            return const Center(
-                              child: Text('Failed to load image'),
-                            );
-                          },
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius:  BorderRadius.circular(12),
+                          child: AspectRatio(
+                            aspectRatio: 1 / 2,
+                            child: Image.network(
+                              "https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/portfolio-img.jpg?alt=media&token=e947ff21-dff9-49e4-aedc-e01180aa6f7b",
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                 ),
