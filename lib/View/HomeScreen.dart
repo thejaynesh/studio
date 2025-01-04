@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [
-                        const BoxShadow(
+                         BoxShadow(
                           color: Colors.black26,
                           blurRadius: 6,
                           offset: Offset(2, 2),
