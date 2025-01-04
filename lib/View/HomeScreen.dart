@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             backgroundBlendMode: BlendMode.softLight,
             color: Colors.white,
+
           ),
           child: Padding(
             padding:
