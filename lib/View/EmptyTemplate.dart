@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:studio/View/HomeScreen.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'CustomFAB.dart';
 
 class Template extends StatefulWidget {
   const Template({Key? key}) : super(key: key);
@@ -11,6 +14,13 @@ class Template extends StatefulWidget {
 class _TemplateState extends State<Template> {
   int screenIndex = 0;
 
+
+  Future<void> _launchUrl(_url) async {
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,6 +30,25 @@ class _TemplateState extends State<Template> {
           //   title: Text("Jaynesh Bhandari"),
           //   centerTitle: true,
           // ),
+          floatingActionButton: ExpandableFab(
+            distance: 88,
+            children: [
+              ActionButton(
+                onPressed: () {_launchUrl(Uri.parse('tel:+12073137210'));},
+                icon: const Icon(Icons.mail_outline),
+              ),
+              ActionButton(
+                onPressed: () {_launchUrl(Uri.parse('tel:+12073137210'));},
+                icon: const Icon(Icons.phone),
+              ),
+              ActionButton(
+                onPressed: () {_launchUrl(Uri.parse('tel:+12073137210'));}
+                ,
+                icon: const Icon(Icons.textsms_outlined),
+              ),
+            ],
+          ),
+
             body:
             Container(
 

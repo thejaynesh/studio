@@ -16,7 +16,7 @@ Future<void> main() async {
 
   // Fetch Firestore data based on trckParam
   final FirestoreService firestoreService = FirestoreService();
-  final fetchedData =  await firestoreService.fetchJobApplication(trckParam);
+  final fetchedData = await firestoreService.fetchJobApplication(trckParam);
   runApp(MyApp(fetchedData: fetchedData));
 }
 
@@ -27,16 +27,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'The Studio',
-      theme: ThemeData(
-          textTheme: TextTheme(
-        displayLarge: GoogleFonts.montserrat(
-          fontSize: 46,
-          color: Colors.white
-        ),
-      )),
-      home: SplashScreen(data: fetchedData),
-    );
+    return LayoutBuilder(// Use LayoutBuilder to get screen constraints
+        builder: (context, constraints) {
+      // Get screen width to determine responsive font sizes
+      final screenWidth = constraints.maxWidth;
+
+      // Define a base font size based on screen width
+      final baseFontSize = screenWidth / 30; // Adjust denominator as needed
+      return MaterialApp(
+        title: 'The Studio',
+        theme: ThemeData(
+            textTheme: TextTheme(
+          bodySmall: GoogleFonts.montserrat(
+              color: Colors.white, fontSize: baseFontSize * 0.32),
+          displayMedium: GoogleFonts.montserrat(
+              color: Colors.white, fontSize: baseFontSize * 0.6),
+          displayLarge: GoogleFonts.montserrat(
+              color: Colors.black, fontSize: baseFontSize * 0.8),
+          displaySmall: GoogleFonts.montserrat(
+              color: Colors.white, fontSize: baseFontSize*0.3),
+          headlineLarge: GoogleFonts.montserrat(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: baseFontSize ),
+          titleLarge: GoogleFonts.montserrat(
+              color: Colors.white, fontSize: baseFontSize * 0.4),
+        )),
+        home: SplashScreen(data: fetchedData),
+      );
+    });
   }
 }
