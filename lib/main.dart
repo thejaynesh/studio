@@ -31,9 +31,13 @@ class MyApp extends StatelessWidget {
       title: 'The Studio',
       theme: ThemeData(
           textTheme: TextTheme(
+            displayMedium: GoogleFonts.montserrat(
+              fontSize: 32,
+              color: Colors.white
+          ),
         displayLarge: GoogleFonts.montserrat(
           fontSize: 46,
-          color: Colors.white
+          color: Colors.black
         ),
       )),
       home: SplashScreen(data: fetchedData),

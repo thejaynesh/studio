@@ -8,13 +8,13 @@ class AnimatedTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme.displayLarge!; // Define style once
+    final textStyle = Theme.of(context).textTheme.displayMedium!; // Define style once
 
     return AnimatedTextKit(
       animatedTexts: texts
           .map((text) => buildTypewriterAnimatedText(text, textStyle))
           .toList(),
-      totalRepeatCount: 1, // Play the animation only once
+      totalRepeatCount: 5, // Play the animation only once
       pause: const Duration(milliseconds: 100), // Pause after each text
       displayFullTextOnTap: true, // Display the full text on tap
       stopPauseOnTap: true, // Stop the pause on tap
