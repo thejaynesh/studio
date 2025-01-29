@@ -38,20 +38,40 @@ class MyApp extends StatelessWidget {
         title: 'The Studio',
         theme: ThemeData(
             textTheme: TextTheme(
+
+
           bodySmall: GoogleFonts.montserrat(
-              color: Colors.white, fontSize: baseFontSize * 0.32),
+              color: Colors.white, fontSize: 16),
+          bodyMedium: GoogleFonts.montserrat(
+              color: Colors.white, fontSize: 18),
+          bodyLarge: GoogleFonts.montserrat(
+              color: Colors.white, fontSize: 22),
+
+
           displayMedium: GoogleFonts.montserrat(
               color: Colors.white, fontSize: baseFontSize * 0.6),
           displayLarge: GoogleFonts.montserrat(
               color: Colors.black, fontSize: baseFontSize * 0.8),
           displaySmall: GoogleFonts.montserrat(
               color: Colors.white, fontSize: baseFontSize*0.3),
+
+
           headlineLarge: GoogleFonts.montserrat(
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              fontSize: baseFontSize ),
+              fontSize: 32),
+          headlineMedium: GoogleFonts.montserrat(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 24),
+          headlineSmall: GoogleFonts.montserrat(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 16),
+
+
           titleLarge: GoogleFonts.montserrat(
-              color: Colors.white, fontSize: baseFontSize * 0.4),
+              color: Colors.white, fontSize: 20,),
         )),
         home: SplashScreen(data: fetchedData),
       );

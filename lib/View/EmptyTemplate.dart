@@ -34,7 +34,7 @@ class _TemplateState extends State<Template> {
             distance: 88,
             children: [
               ActionButton(
-                onPressed: () {_launchUrl(Uri.parse('tel:+12073137210'));},
+                onPressed: () {_launchUrl(Uri.parse('mailto:thejaynesh+cvweb@gmail.com'));},
                 icon: const Icon(Icons.mail_outline),
               ),
               ActionButton(

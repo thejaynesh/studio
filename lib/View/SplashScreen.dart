@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 1), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const Template()),
@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: AnimatedTextWidget(texts: [
           'Welcome',
-           'Recruitor at ${data.CompanyName}'
+           'Recruitor at ${data.CompanyName} '
         ],
 
         )

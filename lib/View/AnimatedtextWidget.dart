@@ -8,7 +8,7 @@ class AnimatedTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme.displayMedium!; // Define style once
+    final textStyle = Theme.of(context).textTheme.titleLarge!; // Define style once
 
     return AnimatedTextKit(
       animatedTexts: texts
