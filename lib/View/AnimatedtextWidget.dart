@@ -14,7 +14,7 @@ class AnimatedTextWidget extends StatelessWidget {
       animatedTexts: texts
           .map((text) => buildTypewriterAnimatedText(text, textStyle))
           .toList(),
-      totalRepeatCount: 1, // Play the animation only once
+      totalRepeatCount: 5, // Play the animation only once
       pause: const Duration(milliseconds: 100), // Pause after each text
       displayFullTextOnTap: true, // Display the full text on tap
       stopPauseOnTap: true, // Stop the pause on tap
