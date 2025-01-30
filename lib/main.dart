@@ -41,11 +41,11 @@ class MyApp extends StatelessWidget {
 
 
           bodySmall: GoogleFonts.montserrat(
-              color: Colors.white, fontSize: 16),
+              color: Colors.white, fontSize: 12),
           bodyMedium: GoogleFonts.montserrat(
-              color: Colors.white, fontSize: 18),
+              color: Colors.white, fontSize: 14),
           bodyLarge: GoogleFonts.montserrat(
-              color: Colors.white, fontSize: 22),
+              color: Colors.white, fontSize: 18),
 
 
           displayMedium: GoogleFonts.montserrat(
