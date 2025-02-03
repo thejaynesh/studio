@@ -13,7 +13,6 @@ class HomeSections extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all( 20.0),
       child: Container(
-        width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(20)),
           backgroundBlendMode: BlendMode.softLight,

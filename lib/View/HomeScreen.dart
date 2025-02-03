@@ -56,7 +56,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           HomeSections(
             child: Stack(
@@ -131,7 +130,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'I am Jaynesh Bhandari, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere, erat quis mattis eleifend, nulla metus lobortis sapien, eu dapibus sapien sem sit amet nulla. Donec quis mauris metus. Quisque ante enim, sodales et tristique sit amet, tristique eu arcu. Integer egestas vestibulum gravida. Suspendisse fringilla aliquet lorem, vel consectetur metus rutrum ac. Nulla facilisi. Etiam accumsan dui eu gravida dictum. Proin ullamcorper neque id metus mattis, ac rhoncus orci rhoncus. Donec et purus sit amet libero tincidunt iaculis.',
+                  'I am Jaynesh Bhandari,'
+                      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere, erat quis mattis eleifend, nulla metus lobortis sapien, eu dapibus sapien sem sit amet nulla. Donec quis mauris metus. Quisque ante enim, sodales et tristique sit amet, tristique eu arcu. Integer egestas vestibulum gravida. Suspendisse fringilla aliquet lorem, vel consectetur metus rutrum ac. Nulla facilisi. Etiam accumsan dui eu gravida dictum. Proin ullamcorper neque id metus mattis, ac rhoncus orci rhoncus. Donec et purus sit amet libero tincidunt iaculis.',
                   softWrap: true,
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
