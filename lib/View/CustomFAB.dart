@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 @immutable
 class ExpandableFab extends StatefulWidget {
-  const ExpandableFab({
+  const ExpandableFab({Key? key, 
     this.initialOpen,
     required this.distance,
     required this.children,
-  });
+  }) : super(key: key);
 
   final bool? initialOpen;
   final double distance;
@@ -185,10 +185,10 @@ class _ExpandingActionButton extends StatelessWidget {
 
 @immutable
 class ActionButton extends StatelessWidget {
-  const ActionButton({
+  const ActionButton({Key? key, 
     this.onPressed,
     required this.icon,
-  });
+  }) : super(key: key);
 
   final VoidCallback? onPressed;
   final Widget icon;
@@ -212,9 +212,9 @@ class ActionButton extends StatelessWidget {
 
 @immutable
 class FakeItem extends StatelessWidget {
-  const FakeItem({
+  const FakeItem({Key? key, 
     required this.isBig,
-  });
+  }) : super(key: key);
 
   final bool isBig;
 

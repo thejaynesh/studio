@@ -64,30 +64,28 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Align(
                   alignment: Alignment.centerRight,
-                  child: Flexible(
-                    child: Container(
-                      constraints: const BoxConstraints(
-                        maxHeight: 300,
-                        maxWidth: 300,
-                      ),
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black26,
-                            blurRadius: 20,
-                            offset: Offset(0, 6),
-                          ),
-                        ],
-                      ),
-                      child: AspectRatio(
-                        aspectRatio: 4 / 5,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.network(
-                            "https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/landscape-placeholder-svgrepo-com.png?alt=media&token=f4189930-71d5-4426-aaa7-7a2d551a9dc2",
-                            fit: BoxFit.cover,
-                          ),
+                  child: Container(
+                    constraints: const BoxConstraints(
+                      maxHeight: 300,
+                      maxWidth: 300,
+                    ),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 20,
+                          offset: Offset(0, 6),
+                        ),
+                      ],
+                    ),
+                    child: AspectRatio(
+                      aspectRatio: 4 / 5,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.network(
+                          "https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/landscape-placeholder-svgrepo-com.png?alt=media&token=f4189930-71d5-4426-aaa7-7a2d551a9dc2",
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
