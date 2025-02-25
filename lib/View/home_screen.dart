@@ -83,7 +83,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          "https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/landscape-placeholder-svgrepo-com.png?alt=media&token=f4189930-71d5-4426-aaa7-7a2d551a9dc2",
+                          "https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/portfolio_img_3.JPG?alt=media&token=96dc30f3-f672-4579-8d75-76aab1f315b9",
+                          //"https://firebasestorage.googleapis.com/v0/b/studio-jb12.appspot.com/o/landscape-placeholder-svgrepo-com.png?alt=media&token=f4189930-71d5-4426-aaa7-7a2d551a9dc2",
                           fit: BoxFit.cover,
                         ),
                       ),
