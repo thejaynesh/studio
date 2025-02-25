@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:studio/View/SplashScreen.dart';
+import 'package:studio/View/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'Model/JobApplication.dart';
-import 'Services/Firestore_service.dart';
+import 'Model/job_application.dart';
+import 'Services/firestore_service.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {

@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../Model/JobApplication.dart';
+import '../Model/job_application.dart';
 
 class FirestoreService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -18,7 +18,6 @@ class FirestoreService {
             .get();
 
         if (documentSnapshot.exists) {
-          print(trckParam);
           return JobApplication.fromFirestore(
             documentSnapshot.data() as Map<String, dynamic>,
           );
@@ -39,7 +38,6 @@ class FirestoreService {
         throw Exception('Fallback document not found.');
       }
     } catch (e) {
-      print('Error fetching Firestore document: $e');
       throw Exception('Error fetching data from Firestore.');
     }
   }

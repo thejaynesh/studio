@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:studio/View/AnimatedtextWidget.dart';
+import 'package:studio/View/animated_text_widget.dart';
 
-import 'HomeSections.dart';
-import 'SkillCard.dart';
+import 'page_sections.dart';
+import 'skill_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -130,8 +130,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'I am Jaynesh Bhandari,'
-                      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere, erat quis mattis eleifend, nulla metus lobortis sapien, eu dapibus sapien sem sit amet nulla. Donec quis mauris metus. Quisque ante enim, sodales et tristique sit amet, tristique eu arcu. Integer egestas vestibulum gravida. Suspendisse fringilla aliquet lorem, vel consectetur metus rutrum ac. Nulla facilisi. Etiam accumsan dui eu gravida dictum. Proin ullamcorper neque id metus mattis, ac rhoncus orci rhoncus. Donec et purus sit amet libero tincidunt iaculis.',
+                  "Hi! I am Jaynesh Bhandari. I am currently pursuing a Master’s of Science in Computer Science at Northeastern University. I am a software developer, problem solver and tech enthusiast, creating impactful software. I enjoy tackling new problems. I have experience with many tech stacks such as Java, Dart, Flutter, SQL, JavaScript, Python, HTML, CSS, and SQL."
+                      "Before starting my Master’s journey, I worked in TCS as an Assistant System Engineer, working with Java for Full Stack Development and as a Freelance Flutter Developer, helping small and budding businesses with a better online presence. I love to push myself to learn new things and bring ideas to reality through code."
+                      "When I am not coding, you’ll probably find me solving puzzles or travelling. Feel free to connect, I would love to chat and collaborate!",
                   softWrap: true,
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),

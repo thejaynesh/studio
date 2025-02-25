@@ -7,13 +7,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:studio/Model/job_application.dart';
 
 import 'package:studio/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    JobApplication job = new JobApplication(jobPosition: "Intern", companyName: "Google", message: "Hire me", logo: "logo", viewCount: 0);
+    await tester.pumpWidget(MyApp(fetchedData: job,));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
